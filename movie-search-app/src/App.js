@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
      Movie Search
+     <input type="text" placeholder="Write Movie name" />
     </div>
   );
 }

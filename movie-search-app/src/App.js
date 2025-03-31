@@ -25,6 +25,9 @@ function App() {
           </li>
         )}
       </ul>
+      <div>
+        Pagination
+      </div>
     </div>
   );
 }

@@ -26,7 +26,8 @@ function App() {
         )}
       </ul>
       <div>
-        Pagination
+        Pagination Added
+        <div>{data.length}</div>
       </div>
     </div>
   );

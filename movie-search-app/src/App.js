@@ -10,7 +10,6 @@ function App() {
       .then((res1) => setData(res1))
       .catch((err) => { console.log("Error", err) })
   }, [value])
-  console.log("Data", data)
   return (
     <div className="App">
       Movie Search
@@ -18,6 +17,9 @@ function App() {
       <ul>
         {data?.map((item) =>
           <li style={{ display: "flex" ,border:"1px solid black" ,justifyContent:"space-between",alignItems:"center"}} >
+            <a style={{marginLeft:"20px"}} href={item.show.officialSite ? item.show.officialSite : item.show.url} target='_blank' rel='noreferrer'>
+              <h6>{item.show.name}</h6>
+            </a>
             <a style={{marginLeft:"20px"}} href={item.show.officialSite ? item.show.officialSite : item.show.url} target='_blank' rel='noreferrer'>
               <h6>{item.show.name}</h6>
             </a>

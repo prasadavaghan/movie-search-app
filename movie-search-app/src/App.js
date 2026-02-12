@@ -4,12 +4,14 @@ import { useEffect, useState } from "react"
 function App() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("")
+
   useEffect(() => {
     fetch(` https://api.tvmaze.com/search/shows?q=${value}`)
       .then((res) => res.json())
       .then((res1) => setData(res1))
       .catch((err) => { console.log("Error", err) })
   }, [value])
+
   return (
     <div className="App">
       Movie Search
@@ -29,7 +31,9 @@ function App() {
       </ul>
       <div>
         Pagination Added
+        <button>Next</button>
         <div>{data.length-1}</div>
+        <button>Previous</button>
       </div>
     </div>
   );
